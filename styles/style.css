@@ -1,0 +1,188 @@
+/* General resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+/* Style for a fixed header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+/* Spacing to push content below the header */
+/*.content {
+  margin-top: 60px; /* Same height as header */
+/*} */
+
+.container {
+  height: 100vh;
+  scroll-snap-type: y mandatory; /* Enable vertical snapping */
+  overflow-y: scroll; /* Allow scrolling within the container */
+  scroll-behavior: smooth; /* Smooth scrolling between sections */
+  margin-top: 60px; /* Same height as header */
+}
+
+/* Full-height sections for the long scrolling effect */
+section {
+  scroll-snap-align: start; /* Snap sections to the start */
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+/* .overlay-text {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  text-align: center;
+  font-size: 40px;
+} */
+
+/* Different background colors for each section */
+#section1 {
+  background-color: #00d9ff;
+}
+
+#section2 {
+  background-color: #ff5500;
+}
+
+#section3 {
+  background-color: #a6ff00;
+}
+
+#section4 {
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+#section5 {
+  background-image: url(../images/wallpaper.jpg);
+}
+
+#section6 {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+#pre-order {
+  background-color: rgb(128, 128, 128);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Footer */
+footer {
+  height: 100px;
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation links in header */
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #aa00ff;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: #ff00ee;
+}
+
+/* Show button when user scrolls past section 1 */
+body.scrolled .back-to-top {
+  display: block;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding: 0 30px;
+  z-index: 1;
+}
+
+.video video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+}
+
+.overlay-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #00000000;
+  color: #fff;
+}
+
+/* .video-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+} */
+
+/* .video-section video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+} */

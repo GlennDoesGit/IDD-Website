@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Section Webpage</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+
+  <body>
+    <!-- Fixed header with navigation bar -->
+    <header>
+      <nav>
+        <a href="index.html"><b>LOGO</b></a>
+        <a href="#section1">Section 1</a> <!-- a represent attribute -->
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+        <a href="#section4">Section 4</a>
+        <a href="#section5">Section 5</a>
+        <a href="#section6">Section 6</a>
+        <a href="pre-order.html">Pre-Order</a>
+      </nav>
+    </header>
+
+    <a href="#top" class="back-to-top">Back to Top</a>
+
+    <!-- Body -->
+    <div class="container">
+      <section id="section1">
+        Welcome to Section 1
+      </section>
+
+      <section id="section2">
+        This is Section 2
+      </section>
+      
+      <section id="section3">
+        You are viewing Section 3
+        <iframe width="1280" height="720"
+          src="https://www.youtube.com/embed/8BNEtJZDHbw"
+          title="YouTube Video Player" frameborder="0" allowfullscreen>
+        </iframe>
+      </section>
+
+      <section id="section4">
+        Reached Section 4
+      </section>
+
+      <section id="section5">
+        Almost there, Section 5
+      </section>
+      
+      <section id="section6">
+        <div class="video">
+            <video autoplay loop muted playsinline>
+              <source src="./videos/video 1280 x 720.mp4" type="video/mp4">
+            </video>
+          <div class="overlay-text">
+            Finally, Section 6
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; Multiple Section Webpage Footer
+    </footer>
+
+    <script src="./scripts/main.js"></script>
+
+    <script>
+      window.onscroll = function() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              document.querySelector('.back-to-top').style.display = 'block';
+          } else {
+              document.querySelector('.back-to-top').style.display = 'none';
+          }
+      };
+    </script>
+  </body>
+</html>
