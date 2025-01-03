@@ -1,18 +1,24 @@
-/* General resets */
-* {
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-html, body {
-  font-family: Arial, sans-serif;
-  height: 100%;
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth; /* smooth - gradual scrolling or auto - instant scrolling */
+}
+  
+.gradient {
+  background: linear-gradient(to right, #3CBDA5, #2B2B6D); /* Gradient from top to bottom */
+	background-size: 100% calc(100% + 1px);
 }
 
 /* Style for a fixed header */
 header {
-  position: fixed;
+  position: fixed; /* Fixed header at top edge of screen */
   top: 0;
   left: 0;
   width: 100%;
@@ -21,27 +27,45 @@ header {
   color: white;
   text-align: center;
   line-height: 60px;
-  font-size: 20px;
-  z-index: 1000;
+  font-size: 30px;
+  z-index: 100;
 }
 
 /* Spacing to push content below the header */
-/*.content {
-  margin-top: 60px; /* Same height as header */
-/*} */
-
-.container {
-  height: 100vh;
-  scroll-snap-type: y mandatory; /* Enable vertical snapping */
-  overflow-y: scroll; /* Allow scrolling within the container */
-  scroll-behavior: smooth; /* Smooth scrolling between sections */
-  margin-top: 60px; /* Same height as header */
+.content {
+  margin-top: 60px;
 }
 
-/* Full-height sections for the long scrolling effect */
+#web-canvas {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: fixed;
+  touch-action: none;
+}
+
+#web-canvas-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+/* Navigation links in header */
+nav a { /* nav selector targeting all <a> elements (anchor tags) within a <nav> element */
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover { /* :hover pseudo-class allows <nav> element to change when hovered */
+  text-decoration: underline;
+}
+
 section {
-  scroll-snap-align: start; /* Snap sections to the start */
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -49,95 +73,36 @@ section {
   font-size: 40px;
   color: white;
   text-align: center;
-  z-index: 2;
+  z-index: 5;
 }
 
-/* .overlay-text {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(255, 255, 255);
-  z-index: 2;
-  text-align: center;
-  font-size: 40px;
-} */
-
-/* Different background colors for each section */
-#section1 {
+/* Different background content for each section */
+#view1 {
   background-color: #00d9ff;
 }
 
-#section2 {
+#view2 {
   background-color: #ff5500;
 }
 
-#section3 {
+#view3 {
   background-color: #a6ff00;
 }
 
-#section4 {
+#view4 {
   background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
 }
 
-#section5 {
-  background-image: url(../images/wallpaper.jpg);
+#view5 {
+  background-image: url(../assets/wallpaper.jpg);
 }
 
 #section6 {
   background-color: rgba(0, 0, 0, 1);
 }
 
-#pre-order {
-  background-color: rgb(128, 128, 128);
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Footer */
-footer {
-  height: 100px;
-  background-color: #222;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Navigation links in header */
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #aa00ff;
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 20px;
-  display: none;
-}
-
-.back-to-top:hover {
-  background-color: #ff00ee;
-}
-
-/* Show button when user scrolls past section 1 */
-body.scrolled .back-to-top {
-  display: block;
+#section7 {
+  background-color: #953553;
 }
 
 .video {
@@ -167,22 +132,74 @@ body.scrolled .back-to-top {
   align-items: center;
   width: 100%;
   height: 100%;
-  background: #00000000;
+  background: #ffffff00;
   color: #fff;
 }
 
-/* .video-section {
-  text-align: center;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  width: 100%;
+/* #view6 {
+  background-color: rgb(127, 127, 127);
 } */
 
-/* .video-section video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+#pre-order {
+  background-color: rgb(128, 128, 128);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #aa00ff;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  display: none;
+  z-index: 10;
+}
+
+.back-to-top:hover { /* Hover is a pseudo-class */
+  background-color: #ff00ee;
+}
+
+/* Show button when user scrolls past section 1 */
+body.scrolled .back-to-top {
+  display: block;
+}
+
+/* Footer */
+footer {
+  height: 100px;
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .square1 {
+	width: 200px;
+	height: 200px;
+	background-color:dimgray;
 } */
+
+.section-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 100; /* Start elements invisible */
+}
+
+.text {
+  margin-left: 150px;
+  transform: translateX(-150%); /* Move text out of viewport on the left */
+}
+
+.image {
+  margin-right: 150px;
+  transform: translateX(150%); /* Move image out of viewport on the right */
+  max-width: 360px;
+  max-height: 360px;
+  border-radius: 60px;
+}

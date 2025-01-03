@@ -1,82 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Section Webpage</title>
-    <link rel="stylesheet" href="styles/style.css">
-  </head>
+	<head>
+		<title>GSAP Animated Page Scroll with GLB Visibility Control</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+		<link type="text/css" rel="stylesheet" href="./styles/style.css">
+	</head>
 
-  <body>
-    <!-- Fixed header with navigation bar -->
-    <header>
+	<body>
+		<header>
       <nav>
         <a href="index.html"><b>LOGO</b></a>
-        <a href="#section1">Section 1</a> <!-- a represent attribute -->
-        <a href="#section2">Section 2</a>
-        <a href="#section3">Section 3</a>
-        <a href="#section4">Section 4</a>
-        <a href="#section5">Section 5</a>
+        <a href="#view1">Section 1</a> <!-- a represent attribute -->
+        <a href="#view2">Section 2</a>
+        <a href="#view3">Section 3</a>
+        <a href="#view4">Section 4</a>
+        <a href="#view5">Section 5</a>
         <a href="#section6">Section 6</a>
+        <a href="#section7">Section 7</a>
         <a href="pre-order.html">Pre-Order</a>
       </nav>
     </header>
 
     <a href="#top" class="back-to-top">Back to Top</a>
 
-    <!-- Body -->
-    <div class="container">
-      <section id="section1">
-        Welcome to Section 1
-      </section>
-
-      <section id="section2">
-        This is Section 2
+    <div class="content">
+      <section id="view1">
+        View 1
       </section>
       
-      <section id="section3">
-        You are viewing Section 3
-        <iframe width="1280" height="720"
-          src="https://www.youtube.com/embed/8BNEtJZDHbw"
-          title="YouTube Video Player" frameborder="0" allowfullscreen>
-        </iframe>
+      <section id="view2">
+        View 2
       </section>
 
-      <section id="section4">
-        Reached Section 4
+      <section id="view3">
+        <div class="section-content">
+          <div class="text">Welcome to View 3</div>
+          <img class="image" src="./assets/casio g-shock watch image.jpg" alt="Placeholder Image">
+        </div>
       </section>
 
-      <section id="section5">
-        Almost there, Section 5
+      <section id="view4">
+        View 4
       </section>
-      
+
+      <section id="view5">
+        View 5
+      </section>
+
       <section id="section6">
         <div class="video">
             <video autoplay loop muted playsinline>
-              <source src="./videos/video 1280 x 720.mp4" type="video/mp4">
+              <source src="./assets/video 1280 x 720.mp4" type="video/mp4">
             </video>
           <div class="overlay-text">
-            Finally, Section 6
+            Section 6
           </div>
         </div>
       </section>
+
+      <section id="section7">
+        Finally, Section 7 
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        &copy; Page Scroll Webpage Footer
+      </footer>
+
+      <div id="web-canvas-container">
+        <canvas id="web-canvas"></canvas>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-      &copy; Multiple Section Webpage Footer
-    </footer>
-
-    <script src="./scripts/main.js"></script>
-
-    <script>
-      window.onscroll = function() {
-          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-              document.querySelector('.back-to-top').style.display = 'block';
-          } else {
-              document.querySelector('.back-to-top').style.display = 'none';
-          }
-      };
-    </script>
-  </body>
+		<script src="./scripts/main.js" type="module"></script>
+	</body>
 </html>
