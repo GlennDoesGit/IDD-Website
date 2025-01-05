@@ -39,14 +39,14 @@ async function setupViewer() {
   await viewer.setEnvironmentMap("./assets/autumn forest.hdr");
 
   // await manager.addFromPath("./assets/casio watch.glb");
-  const model = await viewer.load("./assets/casio g-shock watch v2.glb");
+  const model = await viewer.load("./assets/iphone_16_pro_max.glb");
 
   // let scrollSection = document.getElementById("scrollSection");
   // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
 
   // ScrollTrigger for controlling GLB model visibility in specific section
   ScrollTrigger.create({
-    trigger: '#section6', // The section where the model should be in-active
+    trigger: '#section3', // The section where the model should be in-active
     start: '10% bottom', // When the top of the section reaches the center of the viewport
     end: '110% center', // When the bottom of the section leaves the center of the viewport
     onEnter: () => {

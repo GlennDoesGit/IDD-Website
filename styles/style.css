@@ -77,27 +77,29 @@ section {
 }
 
 /* Different background content for each section */
-#view1 {
-  background-color: #00d9ff;
+#section1 {
+  height: 200vh;
+  background-color: #181a29;
 }
 
-#view2 {
-  background-color: #ff5500;
+#section2 {
+  background-color: #2f3351;
 }
 
-#view3 {
-  background-color: #a6ff00;
+#section3 {
+  background-color: #181a29;
 }
 
 #view4 {
   background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
 }
 
-#view5 {
+#section5 {
+  background-color: #953553;
   background-image: url(../assets/wallpaper.jpg);
 }
 
-#section6 {
+#section4 {
   background-color: rgba(0, 0, 0, 1);
 }
 
@@ -193,12 +195,12 @@ footer {
 
 .text {
   margin-left: 150px;
-  transform: translateX(-150%); /* Move text out of viewport on the left */
+  /*transform: translateX(-150%); /* Move text out of viewport on the left */
 }
 
 .image {
   margin-right: 150px;
-  transform: translateX(150%); /* Move image out of viewport on the right */
+  /*transform: translateX(150%); /* Move image out of viewport on the right */
   max-width: 360px;
   max-height: 360px;
   border-radius: 60px;
