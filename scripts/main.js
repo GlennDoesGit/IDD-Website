@@ -46,7 +46,7 @@ async function setupViewer() {
 
   // ScrollTrigger for controlling GLB model visibility in specific section
   ScrollTrigger.create({
-    trigger: '#section3', // The section where the model should be in-active
+    trigger: '#section4', // The section where the model should be in-active
     start: '10% bottom', // When the top of the section reaches the center of the viewport
     end: '110% center', // When the bottom of the section leaves the center of the viewport
     onEnter: () => {
@@ -86,7 +86,7 @@ window.onscroll = function() {
 };
 
 // Control GLB model camera view animation while scrolling from section to section
-let scrollSpeed = 1.2;
+let scrollSpeed = 1.5;
 
 // Add an event listener for the 'wheel' event
 document.addEventListener('wheel', function(event) {
@@ -100,7 +100,7 @@ document.addEventListener('wheel', function(event) {
   // Set the new scroll position
   window.scrollTo({
     top: scrollPosition,
-    behavior: 'smooth'
+    // behavior: 'smooth'
   });
 },
 { passive: false });

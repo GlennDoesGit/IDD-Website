@@ -73,12 +73,12 @@ section {
   font-size: 40px;
   color: white;
   text-align: center;
-  z-index: 5;
+  z-index: 100;
 }
 
 /* Different background content for each section */
-#section1 {
-  height: 200vh;
+#view1 {
+  height: 50vh;
   background-color: #181a29;
 }
 
