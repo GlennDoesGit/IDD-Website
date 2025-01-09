@@ -86,7 +86,7 @@ window.onscroll = function() {
 };
 
 // Control GLB model camera view animation while scrolling from section to section
-let scrollSpeed = 1.5;
+let scrollSpeed = 2.5;
 
 // Add an event listener for the 'wheel' event
 document.addEventListener('wheel', function(event) {
