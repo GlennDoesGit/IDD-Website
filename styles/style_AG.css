@@ -81,11 +81,11 @@ section {
 
 /* Different background content for each section */
 #view1 {
-  height: 15vh;
+  height: 100vh;
 }
 
 #view2 {
-  height: 30vh;
+  height: 125vh;
 }
 
 #view3 {
