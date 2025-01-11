@@ -45,33 +45,33 @@ async function setupViewer() {
   // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
 
   // ScrollTrigger for controlling GLB model visibility in specific section
-  ScrollTrigger.create({
-    trigger: '#section4', // The section where the model should be in-active
-    start: '10% bottom', // When the top of the section reaches the center of the viewport
-    end: '110% center', // When the bottom of the section leaves the center of the viewport
-    onEnter: () => {
-      model.visible = false;
-      console.log('Model disabled when entering section while scrolling downwards');
-    },
-    onLeave: () => {
-      model.visible = true;
-      console.log('Model remains disabled when leaving section while scrolling downwards');
-    },
-    onEnterBack: () => {
-      model.visible = false;
-      console.log('Model remains disabled outside section while scrolling upwards');
-    },
-    onLeaveBack: () => {
-      model.visible = true;
-      console.log('Model re-enabled when re-entering section again while scrolling upwards');
-    },
-    markers: {
-      startColor: "white",
-      endColor: "red",
-      fontSize: "20px",
-      indent: 0,
-    }
-  });
+  // ScrollTrigger.create({
+  //   trigger: '#section4', // The section where the model should be in-active
+  //   start: '10% bottom', // When the top of the section reaches the center of the viewport
+  //   end: '110% center', // When the bottom of the section leaves the center of the viewport
+  //   onEnter: () => {
+  //     model.visible = false;
+  //     console.log('Model disabled when entering section while scrolling downwards');
+  //   },
+  //   onLeave: () => {
+  //     model.visible = true;
+  //     console.log('Model remains disabled when leaving section while scrolling downwards');
+  //   },
+  //   onEnterBack: () => {
+  //     model.visible = false;
+  //     console.log('Model remains disabled outside section while scrolling upwards');
+  //   },
+  //   onLeaveBack: () => {
+  //     model.visible = true;
+  //     console.log('Model re-enabled when re-entering section again while scrolling upwards');
+  //   },
+  //   markers: {
+  //     startColor: "white",
+  //     endColor: "red",
+  //     fontSize: "20px",
+  //     indent: 0,
+  //   }
+  // });
 }
 
 setupViewer();

@@ -1,100 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>GSAP Animated Page Scroll with GLB Visibility Control</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-  <link type="text/css" rel="stylesheet" href="./styles/style_AG.css" />
-</head>
+<html>
+    <head>
+    <title>Aura Zenith Main Page</title>
+    <link rel="stylesheet" href="./styles/Main.css">
+    </head>
 
 <body>
-  <!-- Fixed Header -->
-  <header>
+
+<div class="Hook"> 
+
+    <!-- Navbar -->
     <nav>
-      <a href="index.html"><b>LOGO</b></a>
-      <a href="#view1">Section 1</a>
-      <a href="#section2">Section 2</a>
-      <a href="#section3">Section 3</a>
-      <a href="#section4">Section 4</a>
-      <a href="#section5">Section 5</a>
-      <a href="pre-order.html">Pre-Order</a>
+        <div class="navbar">
+            <div class="NavbarLogoContainer">
+                <img class= "NavBarLogo" src="./assets/Aura Icon.png" class="logo">
+        </div>
+
+        <div class="NavBarButtons">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Go Zenith</a></li>
+                    <li><a href="#">Pre-Order Now</a></li>
+                </ul>
+        </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- Back-to-top Button -->
-  <a href="#top" class="back-to-top">Back to Top</a>
+    <!-- Back-to-top Button -->
+    <a href="#top" class="back-to-top">Back to Top</a>
 
-  <!-- WebGL Canvas (for GLB Model) -->
-  <div id="web-canvas-container">
-    <canvas id="web-canvas"></canvas>
-  </div>
+    <!-- WebGL Canvas (for GLB Model) -->
+    <div id="web-canvas-container">
+        <canvas id="web-canvas"></canvas>
+    </div>
 
-  <!-- Main Content -->
-  <div class="content text-overlay">
-    <section id="view1">
-      <h1>Aura Zenith<br>Empower your presence</h1>
+<!-- Main Content -->
+    <section>
+     <div class="MainPhone">
+         <img class="AuraZenithMain" src="./assets/MainPhone.png" alt="Aura Zenith Phone">
+    </div>
+        
+    <div class="Title">
+            <h1>Aura Zenith</h1>
+            <h3>Empower your  presence.</h3> 
+    </div>
     </section>
 
-    <section id="view2">
-    </section>
+</div>
 
-    <section id="section2">
-      <div class="section-content">
-        <div class="text">
-          <h1>A blend of technology and wellness to empower your lifestyle</h1>
-          <p><br>Aura's smartphones adapt to seamlessly integrate with all your unique needs, promising you an experience like none other.</p>
-          <h1><br>Features</h1>
-          <h3><br>Boosting productivity</h3>
-          <p><br>Writings tools that proofread, summarise and and rewrite sentences into different versions until they're just right, with only a tap.</p>
-          <h3><br>Balancing Well-being</h3>
-          <p><br>Accurate monitoring of user's health metrics to provide insightful tips to encourage wellness- Sleep Quality, Heart Rate, Emotion Tracking.</p>
-          <h3><br>Juicing up creativity</h3>
-          <p><br>Let your imagination run free and create unique images based on descriptions and photos of loved ones from your gallery. Experiment with image styles like animation, illustration, and more.</p>
+<!-- 3 Product Highlights Section -->
+
+<section class="Features">
+
+    <div class="Features_Title"> <!-- To edit sections' Title & Description -->
+        <h2>A blend of technology and wellness. </h2>
+        <p>Aura's smartphones adapt to seamlessly integrate with all your unique needs,
+            promising you an experience like none other.</p>
+    </div>
+
+    <section class="Feature_Cards">
+
+        <div class= "Card_1"> <!-- Product Highlight Card 1 -->
+            <div class="Feature_1"> <!-- To edit card's texts -->
+                <h2>Power up your Productivity</h2>
+                <h3> Writings tools that proofreads, summarise and rewrites sentences in any tone you choose.</h3>
+            </div>
         </div>
-        <img class="image" src="./assets/casio g-shock watch image.jpg" alt="Placeholder Image" />
-      </div>
-    </section>
 
-    <section id="section3">
-      <h1>Colour picker here</h1>
-    </section>
-
-    <section id="section4">
-      <div class="text1">
-          <h2>Unlock Exclusive Benefits Just for You<br>Secure your Aura Zenith today and enjoy these perks:</h2>
-          <h3><br>Priority Delivery</h3>
-          <p><br>Be among the first to experience the cutting-edge Aura Zenith. Pre-order customers will receive their items before the official launch date.</p>
-          <h3><br>Complimentary Personalised Engraving</h3>
-          <p><br>Every pre-order comes with a complimentary engraving service to your Aura Zenith truly yours.</p>
-          <h3><br>Special Pre-Order Discount</h3>
-          <p><br>Enjoy 15% off as a thank-you for reserving early.</p>
-          <h2><br>Don't miss this opportunity! Offer ends 31 December 2024 or while supplies last.</h2>
-      </div>
-    </section>
-
-    <section id="section4">
-      <div class="video">
-        <video autoplay loop muted playsinline>
-          <source src="./assets/video 1280 x 720.mp4" type="video/mp4" />
-        </video>
-        <div class="overlay-text">
-          <h1>Section 4</h1>
+        <div class= "Card_2">  <!-- Product Highlight Card 2 -->
+            <div class="Feature_2"><!-- To edit card's texts -->
+                <h2>Minding your Mindfulness</h2>
+                <h3>Accurate monitoring of your sleep quality, heart rate, and stress levels to provide helpful tips to encourage your wellness.</h3>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section id="section5">
-      <h1>Finally, Section 5</h1>
-    </section>
-  </div>
+        <div class= "Card_3">  <!-- Product Highlight Card 3 -->
+            <div class="Feature_3"><!-- To edit card's texts -->
+                <h2>Create your Zenith Canvas</h2>
+                <h3>Digital creation app that lets you create unique art from your descriptions. Experiment with animation, illustrations and sketches to unleash your creativity.</h3>
+             </div>
+        </div>
+</div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; Page Scroll Webpage Footer</p>
-  </footer>
 
-  <!-- JavaScript -->
-  <script src="./scripts/main.js" type="module"></script>
+ <!-- Viewing Zenith in different colours section. Add .js here -->
+<section class="Customisable">
+    <div class="Customisable Title">
+        <h2>Find the right Zenith for you.</h2>
+    </div>
+
+</section>
+
+
+ <!-- Benefits of PreOrdering Section-->
+<section class="Exclusive Benefits">
+
+     <!--PreOrdering Section Title -->
+    <div class="Exclusive_Benefits_Title">
+        <h2>Unlock Limited Time Exclusive Benefits</h2>
+        <p>Secure your Aura Zenith today and enjoy these perks:</p>
+    </div>
+   
+    <!--PreOrdering Cards -->
+    <div class="PreOrdering_Cards"> 
+        <div class="Exclusive_Benefits_1"> 
+            <h3>Personalized Engravings</h3>
+            <p>Every pre-order comes with a complimentary engraving service to your Aura Zenith truly yours.</p>
+        </div>
+        
+        <div class="Exclusive_Benefits_2">
+            <h3>Priority Delivery</h3>
+            <p>Be among the first to experience the cutting-edge Aura Zenith. Pre-order customers will receive their items before the official launch date.</p>
+        </div>
+        
+        <div class="Exclusive_Benefits_3">
+            <h3> 15% Discount For Pre-Orders!</h3>
+            <p>Don't miss this opportunity! Offer ends on 31st December 2024, or while stocks last.</p>
+        </div>
+    </div>  
+    <h3>Pre-Order Now!</h3>
+</section>
+
+<!-- JavaScript -->
+<canvas class="webgl"></canvas>
+<script src="./scripts/main.js" type="module"></script>
 </body>
 </html>
