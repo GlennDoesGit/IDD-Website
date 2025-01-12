@@ -5,6 +5,7 @@ body {
   background-color: #121212;
 }
 
+/* Section configurations for .glb model scrolling animation - Rafael*/
 section {
   height: auto;
 }
@@ -14,9 +15,14 @@ section {
 }
 
 #section2 {
+  height: 100vh;
+}
+
+#section3 {
   height: 20vh;
 }
 
+/* These are the configs for the .glb model scrolling animation - Rafael */
 #web-canvas {
   width: 100%;
   height: 100%;
@@ -108,6 +114,10 @@ section {
   flex-direction: column;
   justify-content: center;
   color: #ccc;
+  z-index: -1;
+  /* Modified to fix the title to move with the .glb model - Rafael */
+  position: fixed;
+  width: 100%;
 }
 
 .MainTitle h1 {
