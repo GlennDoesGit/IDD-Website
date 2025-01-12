@@ -3,17 +3,19 @@
     <head>
     <title>Aura Zenith Main Page</title>
     <link rel="stylesheet" href="./styles/Main.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     </head>
 
 <body>
-
-<div class="Hook"> 
 
     <!-- Navbar -->
     <nav>
         <div class="navbar">
             <div class="NavbarLogoContainer">
-                <img class= "NavBarLogo" src="./assets/Aura Icon.png" class="logo">
+                <img class= "NavBarLogo" src="/assets/Aura Icon.png" class="logo">
         </div>
 
         <div class="NavBarButtons">
@@ -21,108 +23,155 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Features</a></li>
                     <li><a href="#">Go Zenith</a></li>
-                    <li><a href="#">Pre-Order Now</a></li>
+                    <li><a href="FormIntro.html" class="Pre-Order"> Pre-Order</a></li>
                 </ul>
         </div>
         </div>
-    </nav>
+    </nav> 
+    
 
-    <!-- Back-to-top Button -->
-    <a href="#top" class="back-to-top">Back to Top</a>
-
-    <!-- WebGL Canvas (for GLB Model) -->
-    <div id="web-canvas-container">
-        <canvas id="web-canvas"></canvas>
-    </div>
-
+<!-- WebGL Canvas (for GLB Model) -->
+<div id="web-canvas-container">
+    <canvas id="web-canvas"></canvas>
+</div>
+    
 <!-- Main Content -->
+   
+<div class="MainTitle">
     <section>
+        <h1>Aura Zenith</h1>
+        <h3>Empower your  presence.</h3>
+    </section>
+</div>
+
+<section id="section1"></section>
+<section id="section2"></section>
+
      <div class="MainPhone">
-         <img class="AuraZenithMain" src="./assets/MainPhone.png" alt="Aura Zenith Phone">
+         <img class="AuraZenithMain"
+            src="./assets/AuraZenithHeader.png" alt="Aura Zenith Phone">
     </div>
         
-    <div class="Title">
-            <h1>Aura Zenith</h1>
-            <h3>Empower your  presence.</h3> 
-    </div>
-    </section>
+    
 
-</div>
 
 <!-- 3 Product Highlights Section -->
 
 <section class="Features">
-
-    <div class="Features_Title"> <!-- To edit sections' Title & Description -->
-        <h2>A blend of technology and wellness. </h2>
-        <p>Aura's smartphones adapt to seamlessly integrate with all your unique needs,
-            promising you an experience like none other.</p>
+    <div class="Features_Title">
+        <h2>A blend of <span class="highlight">technology</span> and
+             <span class="highlight">wellness</span>.</h2>
+        <p>Aura’s smartphones adapt to seamlessly integrate with all your unique needs, 
+            <br> promising you an experience like none other.</p>
     </div>
 
     <section class="Feature_Cards">
-
-        <div class= "Card_1"> <!-- Product Highlight Card 1 -->
-            <div class="Feature_1"> <!-- To edit card's texts -->
+        <div class="Card_1">
+            <div class="Feature_1">
                 <h2>Power up your Productivity</h2>
-                <h3> Writings tools that proofreads, summarise and rewrites sentences in any tone you choose.</h3>
+                <p>Writing tools that proofread, summarize, and rewrite sentences in any tone you choose.</p>
             </div>
+            <img src="./assets/ProductivityFeature.jpg" alt="Productivity Feature">
+
         </div>
 
-        <div class= "Card_2">  <!-- Product Highlight Card 2 -->
-            <div class="Feature_2"><!-- To edit card's texts -->
+        <div class="Card_2">
+            <div class="Feature_2">
                 <h2>Minding your Mindfulness</h2>
-                <h3>Accurate monitoring of your sleep quality, heart rate, and stress levels to provide helpful tips to encourage your wellness.</h3>
-          </div>
+                <p>Accurate monitoring of your sleep quality, heart rate, and stress levels to encourage your wellness.</p>
+            </div>
+            <img src="./assets/MindfulnessFeature.png" alt="Mindfulness Feature">
+
         </div>
 
-        <div class= "Card_3">  <!-- Product Highlight Card 3 -->
-            <div class="Feature_3"><!-- To edit card's texts -->
+        <div class="Card_3">
+            <div class="Feature_3">
                 <h2>Create your Zenith Canvas</h2>
-                <h3>Digital creation app that lets you create unique art from your descriptions. Experiment with animation, illustrations and sketches to unleash your creativity.</h3>
-             </div>
+                <p>Digital creation app that lets you create unique art from your descriptions. Experiment with animation, illustrations, and sketches.</p>
+            </div>
+            <img src="./assets/CreativityFeature.jpg" alt="Creativity Feature">
+
         </div>
-</div>
+    </section>
 </section>
 
 
- <!-- Viewing Zenith in different colours section. Add .js here -->
-<section class="Customisable">
-    <div class="Customisable Title">
-        <h2>Find the right Zenith for you.</h2>
+<section class="ExclusiveBenefits">
+    
+    <h2>Unlock Limited Time <span class="highlight">Exclusive Benefits</span></h2>
+    <p>Secure your Aura Zenith today and enjoy these perks:</p>
+
+
+    <div class="Benefits">
+
+        <div class="BenefitCard1">
+            <div class="BenefitCard1Img">
+            <img src="./assets/ExclusiveBenefitPersonalisation.png" alt="Engraving Feature">
+            </div>
+
+        <div class="BenefitCardTexts">
+            <h4>Personalized Engravings</h4>
+            <p>Every pre-order comes with a complimentary
+                <br> engraving service to make your Aura Zenith truly yours.</p>
+        </div>
+        </div>
+
+        <div class="BenefitCard2">
+            <div class="BenefitCard2Img">
+            <img src="./assets/PriorityDelivery.jpeg" alt="Priority Delivery">
+            </div>
+
+        <div class="BenefitCard2Texts">    
+            <h4>Priority Delivery</h4>
+            <p>Be among the first to experience the cutting-edge
+                <br> Aura Zenith. Pre-order customers will receive their 
+                <br>items before the official launch date.</p>
+        </div>
     </div>
 
-</section>
-
-
- <!-- Benefits of PreOrdering Section-->
-<section class="Exclusive Benefits">
-
-     <!--PreOrdering Section Title -->
-    <div class="Exclusive_Benefits_Title">
-        <h2>Unlock Limited Time Exclusive Benefits</h2>
-        <p>Secure your Aura Zenith today and enjoy these perks:</p>
+    <div class="Discount">
+        <h4><strong>15% Discount</strong> For Pre-Orders!</h4>
+        <p>Don’t miss this opportunity! Offer ends on 31st December 2024, or while stocks last.</p>
+        <button class="PreOrderButton">Pre-Order Now</button>
     </div>
-   
-    <!--PreOrdering Cards -->
-    <div class="PreOrdering_Cards"> 
-        <div class="Exclusive_Benefits_1"> 
-            <h3>Personalized Engravings</h3>
-            <p>Every pre-order comes with a complimentary engraving service to your Aura Zenith truly yours.</p>
-        </div>
-        
-        <div class="Exclusive_Benefits_2">
-            <h3>Priority Delivery</h3>
-            <p>Be among the first to experience the cutting-edge Aura Zenith. Pre-order customers will receive their items before the official launch date.</p>
-        </div>
-        
-        <div class="Exclusive_Benefits_3">
-            <h3> 15% Discount For Pre-Orders!</h3>
-            <p>Don't miss this opportunity! Offer ends on 31st December 2024, or while stocks last.</p>
-        </div>
-    </div>  
-    <h3>Pre-Order Now!</h3>
 </section>
 
+
+<footer class="Footer">
+    <div class="FooterContainer">
+      <div class="FooterSection">
+        <h3>AZ</h3>
+        <p>Empower your presence.</p>
+      </div>
+      <div class="FooterSection">
+        <h4>Phone</h4>
+        <ul>
+          <li><a href="#">Product Features</a></li>
+          <li><a href="#">A Closer Look</a></li>
+          <li><a href="#">Pre-Order</a></li>
+        </ul>
+      </div>
+      <div class="FooterSection">
+        <h4>Aura</h4>
+        <ul>
+          <li><a href="#">About Aura</a></li>
+          <li><a href="#">Find a Store</a></li>
+          <li><a href="#">Customer Service</a></li>
+        </ul>
+      </div>
+      <div class="FooterSection">
+        <h4>Contact</h4>
+        <p>Email: aura@customerservice.com</p>
+        <p>Call: 1234 5678</p>
+        <p>(Working Hours: 9am-9pm, Monday-Sunday)</p>
+      </div>
+    </div>
+    <div class="FooterBottom">
+      <p>&copy; 2024 Aura Zenith. All rights reserved.</p>
+      <p><a href="#">Privacy & Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </div>
+  </footer>
+  
 <!-- JavaScript -->
 <canvas class="webgl"></canvas>
 <script src="./scripts/main.js" type="module"></script>

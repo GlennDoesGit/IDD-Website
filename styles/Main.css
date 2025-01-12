@@ -1,15 +1,20 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+  background-color: #121212;
 }
 
-/* Hook Section */
-.Hook {
-  /* background-color: #000000; */
-  width: 100%;
-  min-height: 1080px;
-  position: relative;
+section {
+  height: auto;
+}
+
+#section1 {
+  height: 100vh;
+}
+
+#section2 {
+  height: 20vh;
 }
 
 #web-canvas {
@@ -31,297 +36,431 @@
   background-color: #000000;
 }
 
-/* Main Phone Section */
-.MainPhone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 100px; /* Added padding for better spacing */
-}
-
-.AuraZenithMain {
-  width: 361px;
-  height: 744px;
-}
-
-/* Navbar Section */
+/* Navbar */
 .navbar {
-  width: 100%;
-  padding: 20px 0;
-  position: fixed; /* Keep navbar at the top */
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8); /* Added a background */
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #1c1c1c;
 }
 
-.NavbarLogoContainer {
-  margin-left: 20px;
+.NavbarLogoContainer .NavBarLogo {
+  width: 40px;
+  height: auto;
+  margin: 10px 64px;
 }
 
-.NavBarLogo {
-  width: 30px;
-  height: 45px;
-}
-
-.navbar ul {
+.NavBarButtons ul {
   list-style: none;
-  margin-right: 30px;
   display: flex;
-  gap: 20px; /* Add spacing between navbar items */
+  margin: 10px 64px;
+  padding: 0;
 }
 
-.navbar ul li a {
-  color: #fff;
+.NavBarButtons ul li {
+  margin: 0 15px;
+}
+
+.NavBarButtons ul li a {
   text-decoration: none;
+  color: #fff;
+  font-weight: 500;
   font-size: 16px;
-  padding: 5px 10px;
 }
 
-.navbar ul li:hover a {
-  color: #1149FF;
+.NavBarButtons ul li a:hover {
+  color: #624de3;
 }
 
-/* Title Section */
-.Title {
-  width: 100%;
-  position: relative;
+.MainPhone {
   text-align: center;
-  color: #FFF;
+  padding: 50px 20px;
+  position: relative;
+  background-color: #121212;
+}
+
+.MainPhone::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(98,77,227,0.8) 0%, rgba(29,29,29,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.MainPhone .AuraZenithMain {
+  position: relative;
+  width: 300px;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+/* Header Title */
+
+.MainTitle {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ccc;
+  height: 100vh;
+}
+
+.MainTitle h1 {
+  font-size: 51px;
+  text-align: center;
+}
+
+.MainTitle h3 {
+  font-size: 21px;
+  text-align: center;
+}
+
+
+/* 3 Features Section */
+
+.Features {
+  padding: 50px 20px;
+
+  text-align: center;
+  background-color: #121212;
+}
+
+.Features_Title h2 {
+  font-size:38px;
+  color: #fff;
+}
+
+.Features_Title h2 .highlight {
+  background: linear-gradient(90deg, #007FF5, #56DC73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+.Features_Title p {
+  font-size: 21px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* 3 Features Cards */
+
+.Feature_Cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Card_1, .Card_2, .Card_3 {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.Card_1:hover, .Card_2:hover, .Card_3:hover {
+  background-color: #3d3d3d;
+}
+
+.Card_1 img, .Card_2 img, .Card_3 img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.Feature_1 p, .Feature_2 p, .Feature_3 p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;}
+
+.Feature_1 h3, .Feature_2 h3, .Feature_3 h3 {
+  font-size: 12px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Customisable View */
+
+.PickZenith {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #1c1c1c;
+}
+
+.PickZenith h2 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.PickZenith .ProductImage {
+  width: 300px;
+  height: auto;
+  background-color: #4c4c4c;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.PickZenith .ColorOptions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin-top: 20px;
 }
 
-.Title h1 {
-  font-size: 90px;
-  margin: 20px;
+.PickZenith .ColorOptions .color-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  border: 2px solid #fff;
+  cursor: pointer;
 }
 
-.Title h3 {
-  margin: 20px auto;
-  font-weight: 100;
-}
+/* Pre-Order Benefit Sections */
 
-/* Customisable Section */
-.Customisable {
-  background-color: #13dba6;
-  width: 100%;
-  padding: 50px 20px;
-  margin-top: 50px; /* Ensure it appears below the phone section */
-}
-
-.Customisable.Title h2 {
-  color: #fff;
+/* Pre-Order Benefit Title */
+.ExclusiveBenefits {
+  background-color: #121212;
+  color: white;
   text-align: center;
-  font-size: 36px;
+  padding: 2rem;
 }
 
-
-/* 3 Highlights Section */
-
-/* Section design */
-.Features Section{ 
-  background-color:#ba0bde;
-  width: auto;
-  height: 1080px;
-}
-/* Features Section */
-.Features {
-  background-color: #bb0bde; /* Changed background to purple */
-  width: auto;
-  padding: 50px 20px; 
-  color: #fff; 
-}
-
-.Features_Title{
-  text-align: center;
-  align-items: center;
+.ExclusiveBenefits h2 {
+  font-size:38px;
   color: #fff;
-  padding: 50px
 }
 
-.Feature_Cards {
-  width:100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 32px 32px;
+.ExclusiveBenefits .highlight {
+  background: linear-gradient(90deg, #007FF5, #56DC73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
-.Features_Title h2{
-  margin: 50px auto;
-  font-weight: 100;
-  font-size: 64px;
-}
-
-.Features_Title p{
-  margin: 50px auto;
-  font-weight: 100;
-  font-size: 36px;
-}
-
-.Card_1{
-  width: 576px;
-  height: 670px;
-  border-radius: 55px;
-  padding: 30px;
-  background: #13dba6;
-}
-
-.Feature_1{
- text-align: left;
- align-items: left;
-  color: #fff;
-  
-}
-.Feature_1 h3 {
-  color: #fff;
-  transition: 1s;
-  opacity: 0;
-  margin-top: 30;
-}
-
-.Card_1:hover .Feature_1 h3{
-  opacity: 1;
-  margin-top: 0;
-  transform: translateY(-5px)
-}
-
-.Card_2{
-  width: 576px;
-  height: 670px;
-  border-radius: 55px;
-  padding: 30px;
-  background: #13dba6;
-}
-
-.Feature_2{
-  text-align: left;
-  align-items: left;
-   color: #fff;
-   
- }
- .Feature_2 h3 {
-   color: #fff;
-   transition: 1s;
-   opacity: 0;
-   margin-top: 30;
- }
- 
- .Card_2:hover .Feature_2 h3{
-   opacity: 1;
-   margin-top: 0;
-   transform: translateY(-5px)
- }
-
- .Card_3{
-  width: 576px;
-  height: 670px;
-  border-radius: 55px;
-  padding: 30px;
-  background: #13dba6;
-}
-
-.Feature_3{
-  text-align: left;
-  align-items: left;
-   color: #fff;
-   
- }
- .Feature_3 h3 {
-   color: #fff;
-   transition: 1s;
-   opacity: 0;
-   margin-top: 30;
- }
- 
- .Card_3:hover .Feature_3 h3{
-   opacity: 1;
-   margin-top: 0;
-   transform: translateY(-5px)
- }
-
-/* Customisable View Section design */
-
-/* Customisable (Blue Section) */
-.Customisable {
-  background-color: #31cae5;
-  width: auto;
-  min-height: 300px; /* Set a proper minimum height */
-  padding: 50px 20px; /* Add padding for spacing */
-  margin-bottom: 20px; /* Add margin to separate from the green section */
+.ExclusiveBenefits p {
+  font-size: 21px;
+  color: #ccc;
+  margin-bottom: 30px;
 }
 
 
-.Customisable_Title{
-  text-align: center;
-  align-items: center;
-  color: #fff;
-  padding: 50px
-}
 
+/* Pre-Order Benefit Cards */
 
-.Exclusive.Benefits{
-  background-color:#e54f31;
-  width: auto;
-  height: 1683px;
-}
-
-.Exclusive_Benefits_Title {
-  width: 100%;
-  text-align: center;
-  color: #FFF;
-}
-
-.Exclusive_Benefits_Title h2 {
-  font-size: 64px;
-  margin: 20px;
-  color: #FFF;
-  }
-  
-  .Exclusive_Benefits_Title p {
-    font-size: 36px;
-    margin: 20px auto;
-  color: #FFF;
-  }
-
-.PreOrdering_Cards_Container {
-  width: 1488px;
-  height: 364px;
-  border: 8px black;
-  margin: 25px;
+/* Pre-Order Benefit Horizontal Cards */
+.Benefits {
   display: flex;
-flex-direction: column;
-justify-content: space-evenly;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 2rem; /* Space between each card */
+  align-items: center;
+
 }
 
-  
-  .Exclusive_Benefits_1{
-    width: 1488px;
-    height: 364px;
-    padding: 30px;
-    background: #13dba6;
-  }
-  
-  .Exclusive_Benefits_2{
-    width: 1488px;
-    height: 364px;
-    padding: 30px;
-    background: #13dba6;
-  }
+/* Pre-Order Benefit Card 1 */
+
+.BenefitCard1 {
+display: flex;
+flex-direction: row; /* Align items in a row */
+align-items: center;
+gap: 200px; /* Space between the image and text */
+padding: 16px;
+height: 364px;
+width: 1182px;
+text-align: left; /* Align text to the left */
+}
+
+.BenefitCardTexts{
+font-size: 28px;
+
+}
+
+.BenefitCardTexts p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;}
 
 
-  .Exclusive_Benefits_3 h3{
-    font-size: 45px;
-    margin: 20px;
-    text-align: center;
-  color: #FFF;
-    }
+.BenefitCard1Img{
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+align-items: center;
+  height: 364px;
+width: 439px;
+align-items: center;
+} 
+
+.BenefitCard1Img img {
+  height: 100%;
+width: 100%;
+object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Pre-Order Benefit Card 2 */
+
+.BenefitCard2 {
+  display: flex;
+  padding: 16px;
+  flex-direction: row-reverse; /* Flip image and text positions */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  gap: 10px; /* Reduce gap to bring text and image closer */
+  height: 364px;
+  width: 1182px;
+  text-align: left; /* Ensure text alignment */
+}
+
+.BenefitCard2Texts {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  justify-content: flex-start; /* Align content at the top */
+  align-items: flex-start; /* Align text to the left */
+  text-align: left; /* Ensure text alignment is left */
+  gap: 0.5rem; /* Space between heading and paragraph */
+  width: calc(100% - 439px - 20px); /* Adjust width to avoid overlapping with the image */
+  margin-left: 0; /* Remove any default margin */
+  padding: 0; /* Remove extra padding */
+  font-size: 28px;
+}
+
+
   
-    .Exclusive_Benefits_3 p{
-      font-size: 36px;
-      margin: 20px;
-    color: #FFF;
-    text-align: center;
-      }
+  .BenefitCard2Texts p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;}
+
+
+.BenefitCard2Img {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  height: 364px;
+  width: 439px;
+}
+
+.BenefitCard2Img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Pre-Order Benefit Discount */
+
+.Discount {
+  background-color: #121212;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.Discount h4 {
+  font-size: 28px;
+}
+
+.Discount p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;}
+
+  /* Pre-Order Button */
+
+.PreOrderButton {
+  background-color: #fff;
+  color: #f8a700;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.PreOrderButton:hover {
+  background-color: #f8a700;
+  color: #121212;
+}
+
+
+/* Footer Styles */
+.Footer {
+  background-color: #1c1c1c;
+  color: #ccc;
+  padding: 2rem 1rem;
+  width: 100%; /* Ensure full width */
+  position: relative; /* Ensure footer doesn’t overflow */
+  left: 0; /* Align to the left edge */
+  right: 0; /* Align to the right edge */
+
+}
+
+.FooterContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+
+}
+
+.FooterSection {
+  flex: 1;
+  min-width: 150px;
+}
+
+.FooterSection h3,
+.FooterSection h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.FooterSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.FooterSection ul li {
+  margin-bottom: 0.5rem;
+}
+
+.FooterSection ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.FooterSection ul li a:hover {
+  color: #f8a700;
+}
+
+.FooterBottom {
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.FooterBottom a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.FooterBottom a:hover {
+  color: #f8a700;
+}
