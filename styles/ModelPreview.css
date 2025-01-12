@@ -1,0 +1,110 @@
+.model-preview {
+  padding-top: 40px; /* Added padding from the top */
+  padding-bottom: 40px; /* Added padding from the bottom */
+  background-color: #121212;
+}
+
+.model-preview #preview-canvas {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.model-preview #web-canvas-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+
+.model-preview #ui {
+  position: absolute;
+  top: 0;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.model-preview section {
+  text-align: center; /* Center the text horizontally */
+  margin-bottom: 30px; /* Add some spacing below the section */
+}
+
+.model-preview section h1 {
+  margin: 0; /* Reset margin for the header */
+  font-size: 2em; /* Adjust the size as needed */
+}
+
+.model-preview section p {
+  margin: 10px 0 0; /* Add spacing above the paragraph */
+  font-size: 1em; /* Adjust the size as needed */
+  color: #ccc; /* Optional: Adjust the text color */
+}
+
+.gradient {
+  background: linear-gradient(to bottom, #332836, #0a0a0a); /* Gradient from top to bottom */
+  background-size: 100% calc(100% + 1px);
+}
+
+.viewer-container {
+  width: 400px; /* Adjust width as needed */
+  height: 600px; /* Adjust height as needed */
+  position: relative; /* Enables positioning for child elements */
+  margin: auto; /* Center within its parent */
+  border: 2px solid #ccc; /* Optional: border for visibility */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+  background: #000; /* Optional: background color for contrast */
+  border-radius: 15px; /* Add rounded corners */
+  overflow: hidden; /* Ensures content inside respects the rounded corners */
+  z-index: 5;
+}
+
+.customizer-container {
+  position: absolute;
+  bottom: 20px; /* Position at the bottom of the viewer container */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  display: flex;
+  gap: 10px; /* Spacing between buttons */
+  z-index: 100;
+}
+
+.button-colors {
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  border: 2px solid rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-colors:hover {
+  filter: drop-shadow(0 0 0.75rem rgba(28, 17, 52, 0.7));
+  transform: scale(1.25);
+}
+
+.black {
+  background-color: rgb(20, 20, 20);
+}
+
+.white {
+  background-color: rgb(230, 230, 230);
+}
+
+.pink {
+  background-color: rgb(206, 121, 199);
+}
+
+.green {
+  background-color: rgb(140, 224, 192);
+}
+
+.blue {
+  background-color: rgb(69, 62, 165);
+}
+
+.offset {
+  margin-left: 100px; /* Adds 100px margin on all sides */
+}

@@ -1,0 +1,48 @@
+/* Styling for Store Map */
+.StoreMap {
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    max-width: 650px;
+}
+
+.StoreMap iframe {
+    border-radius: 10px;
+}
+
+/* Styling for Store Info */
+.StoreInfo {
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    max-width: 650px;
+    color: #fff;
+}
+
+.StoreInfo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.StoreInfo p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.StoreInfo ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.StoreInfo ul li {
+    margin: 5px 0;
+}
+
+.StoreInfo ul li strong {
+    color: #624de3;
+}

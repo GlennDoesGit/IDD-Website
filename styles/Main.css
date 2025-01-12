@@ -88,7 +88,7 @@ section {
   transform: translate(-50%, -50%);
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(98,77,227,0.8) 0%, rgba(29,29,29,0) 70%);
+  background: radial-gradient(circle, rgba(98, 77, 227, 0.8) 0%, rgba(29, 29, 29, 0) 70%);
   border-radius: 50%;
   z-index: 0;
 }
@@ -108,17 +108,18 @@ section {
   flex-direction: column;
   justify-content: center;
   color: #ccc;
-  height: 100vh;
 }
 
 .MainTitle h1 {
   font-size: 51px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .MainTitle h3 {
   font-size: 21px;
   text-align: center;
+  margin-top: 5px;
 }
 
 
@@ -132,7 +133,7 @@ section {
 }
 
 .Features_Title h2 {
-  font-size:38px;
+  font-size: 38px;
   color: #fff;
 }
 
@@ -160,7 +161,9 @@ section {
   gap: 20px;
 }
 
-.Card_1, .Card_2, .Card_3 {
+.Card_1,
+.Card_2,
+.Card_3 {
   background-color: #2c2c2c;
   padding: 20px;
   border-radius: 10px;
@@ -168,11 +171,15 @@ section {
   text-align: center;
 }
 
-.Card_1:hover, .Card_2:hover, .Card_3:hover {
+.Card_1:hover,
+.Card_2:hover,
+.Card_3:hover {
   background-color: #3d3d3d;
 }
 
-.Card_1 img, .Card_2 img, .Card_3 img {
+.Card_1 img,
+.Card_2 img,
+.Card_3 img {
   width: 100%;
   height: 200px;
   object-fit: contain;
@@ -180,12 +187,17 @@ section {
   margin-bottom: 15px;
 }
 
-.Feature_1 p, .Feature_2 p, .Feature_3 p {
+.Feature_1 p,
+.Feature_2 p,
+.Feature_3 p {
   font-size: 16px;
   color: #fff;
-  margin-bottom: 10px;}
+  margin-bottom: 10px;
+}
 
-.Feature_1 h3, .Feature_2 h3, .Feature_3 h3 {
+.Feature_1 h3,
+.Feature_2 h3,
+.Feature_3 h3 {
   font-size: 12px;
   color: #ccc;
   line-height: 1.5;
@@ -241,7 +253,7 @@ section {
 }
 
 .ExclusiveBenefits h2 {
-  font-size:38px;
+  font-size: 38px;
   color: #fff;
 }
 
@@ -266,8 +278,10 @@ section {
 /* Pre-Order Benefit Horizontal Cards */
 .Benefits {
   display: flex;
-  flex-direction: column; /* Stack cards vertically */
-  gap: 2rem; /* Space between each card */
+  flex-direction: column;
+  /* Stack cards vertically */
+  gap: 2rem;
+  /* Space between each card */
   align-items: center;
 
 }
@@ -275,40 +289,45 @@ section {
 /* Pre-Order Benefit Card 1 */
 
 .BenefitCard1 {
-display: flex;
-flex-direction: row; /* Align items in a row */
-align-items: center;
-gap: 200px; /* Space between the image and text */
-padding: 16px;
-height: 364px;
-width: 1182px;
-text-align: left; /* Align text to the left */
+  display: flex;
+  flex-direction: row;
+  /* Align items in a row */
+  align-items: center;
+  gap: 200px;
+  /* Space between the image and text */
+  padding: 16px;
+  height: 364px;
+  width: 1182px;
+  text-align: left;
+  /* Align text to the left */
 }
 
-.BenefitCardTexts{
-font-size: 28px;
+.BenefitCardTexts {
+  font-size: 28px;
 
 }
 
 .BenefitCardTexts p {
   font-size: 16px;
   color: #fff;
-  margin-bottom: 10px;}
+  margin-bottom: 10px;
+}
 
 
-.BenefitCard1Img{
+.BenefitCard1Img {
   display: flex;
-  justify-content: center; /* Center the image horizontally */
-align-items: center;
+  justify-content: center;
+  /* Center the image horizontally */
+  align-items: center;
   height: 364px;
-width: 439px;
-align-items: center;
-} 
+  width: 439px;
+  align-items: center;
+}
 
 .BenefitCard1Img img {
   height: 100%;
-width: 100%;
-object-fit: cover;
+  width: 100%;
+  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -317,40 +336,56 @@ object-fit: cover;
 .BenefitCard2 {
   display: flex;
   padding: 16px;
-  flex-direction: row-reverse; /* Flip image and text positions */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  gap: 10px; /* Reduce gap to bring text and image closer */
+  flex-direction: row-reverse;
+  /* Flip image and text positions */
+  align-items: center;
+  /* Center content vertically */
+  justify-content: center;
+  /* Center content horizontally */
+  gap: 10px;
+  /* Reduce gap to bring text and image closer */
   height: 364px;
   width: 1182px;
-  text-align: left; /* Ensure text alignment */
+  text-align: left;
+  /* Ensure text alignment */
 }
 
 .BenefitCard2Texts {
   display: flex;
-  flex-direction: column; /* Stack text vertically */
-  justify-content: flex-start; /* Align content at the top */
-  align-items: flex-start; /* Align text to the left */
-  text-align: left; /* Ensure text alignment is left */
-  gap: 0.5rem; /* Space between heading and paragraph */
-  width: calc(100% - 439px - 20px); /* Adjust width to avoid overlapping with the image */
-  margin-left: 0; /* Remove any default margin */
-  padding: 0; /* Remove extra padding */
+  flex-direction: column;
+  /* Stack text vertically */
+  justify-content: flex-start;
+  /* Align content at the top */
+  align-items: flex-start;
+  /* Align text to the left */
+  text-align: left;
+  /* Ensure text alignment is left */
+  gap: 0.5rem;
+  /* Space between heading and paragraph */
+  width: calc(100% - 439px - 20px);
+  /* Adjust width to avoid overlapping with the image */
+  margin-left: 0;
+  /* Remove any default margin */
+  padding: 0;
+  /* Remove extra padding */
   font-size: 28px;
 }
 
 
-  
-  .BenefitCard2Texts p {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 10px;}
+
+.BenefitCard2Texts p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+}
 
 
 .BenefitCard2Img {
   display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  justify-content: center;
+  /* Center the image horizontally */
+  align-items: center;
+  /* Center the image vertically */
   height: 364px;
   width: 439px;
 }
@@ -374,14 +409,16 @@ object-fit: cover;
 
 .Discount h4 {
   font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .Discount p {
   font-size: 16px;
   color: #fff;
-  margin-bottom: 10px;}
+  margin-bottom: 20px;
+}
 
-  /* Pre-Order Button */
+/* Pre-Order Button */
 
 .PreOrderButton {
   background-color: #fff;
@@ -404,10 +441,14 @@ object-fit: cover;
   background-color: #1c1c1c;
   color: #ccc;
   padding: 2rem 1rem;
-  width: 100%; /* Ensure full width */
-  position: relative; /* Ensure footer doesn’t overflow */
-  left: 0; /* Align to the left edge */
-  right: 0; /* Align to the right edge */
+  width: 100%;
+  /* Ensure full width */
+  position: relative;
+  /* Ensure footer doesn’t overflow */
+  left: 0;
+  /* Align to the left edge */
+  right: 0;
+  /* Align to the right edge */
 
 }
 
