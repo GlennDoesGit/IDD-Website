@@ -20,6 +20,13 @@ async function setupViewer() {
     canvas: document.getElementById('preview-canvas'),
   });
 
+  const canvas = document.getElementById('preview-canvas');
+
+  canvas.addEventListener('wheel', (event) => {
+    event.preventDefault(); // Prevent the default scroll behavior
+    event.stopPropagation(); // Stop the event from propagating to parent elements
+  }, { passive: false }); // Set passive to false to allow preventDefault
+
   await addBasePlugins(viewerpreview);
 
   const manager = await viewerpreview.addPlugin(AssetManagerPlugin);
@@ -53,8 +60,8 @@ async function setupViewer() {
   controls.rotateSpeed = 0.75;
   controls.enableZoom = true;
   controls.enablePan = false;
-  controls.minDistance = 3;
-  controls.maxDistance = 12;
+  controls.minDistance = 5;
+  controls.maxDistance = 20;
 
   const picking = viewerpreview.addPluginSync(PickingPlugin);
   picking.hoverEnabled = true;
@@ -112,7 +119,7 @@ async function setupViewer() {
     ChangeColorGreen()
   })
 
-  document.querySelector('.button-colors.violet')?.addEventListener('click', () => {
+  document.querySelector('.button-colors.blue')?.addEventListener('click', () => {
     ChangeColorBlue()
   })
 
@@ -126,40 +133,35 @@ async function setupViewer() {
   const appleLogo = manager.materials.findMaterialsByName('apple_logo.001')[0]
   const screen = manager.materials.findMaterialsByName('screen.001')[0]
 
-  function ChangeColorBlack()
-  {
+  function ChangeColorBlack() {
     frame.color = new Color(0x7f7f7f);
     baseColor.color = new Color(0x1c1c1c);
     appleLogo.color = new Color(0x363636);
     viewerpreview.scene.setDirty();
   }
 
-  function ChangeColorWhite()
-  {
+  function ChangeColorWhite() {
     frame.color = new Color(0xd9d9d9);
     baseColor.color = new Color(0xd5d5d5);
     appleLogo.color = new Color(0xb5b5b5);
     viewerpreview.scene.setDirty();
   }
 
-  function ChangeColorPink()
-  {
+  function ChangeColorPink() {
     frame.color = new Color(0xdc9ac2);
     baseColor.color = new Color(0xcf94a4);
     appleLogo.color = new Color(0xf6c7e5);
     viewerpreview.scene.setDirty();
   }
 
-  function ChangeColorGreen()
-  {
+  function ChangeColorGreen() {
     frame.color = new Color(0xb6e596);
     baseColor.color = new Color(0x9acd91);
     appleLogo.color = new Color(0xc7f6ca);
     viewerpreview.scene.setDirty();
   }
 
-  function ChangeColorBlue()
-  {
+  function ChangeColorBlue() {
     frame.color = new Color(0x2d2787);
     baseColor.color = new Color(0x37326c);
     appleLogo.color = new Color(0x54559a);

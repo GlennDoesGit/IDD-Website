@@ -3,6 +3,9 @@ body {
   color: #fff;
   font-family: 'Rubik', sans-serif;
   background-color: #121212;
+
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Section configurations for .glb model scrolling animation - Rafael*/
@@ -113,11 +116,12 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #ccc;
+  color: #eeeeee;
   z-index: -1;
   /* Modified to fix the title to move with the .glb model - Rafael */
   position: fixed;
   width: 100%;
+  margin-top:120px;
 }
 
 .MainTitle h1 {
@@ -147,7 +151,15 @@ section {
   color: #fff;
 }
 
-.Features_Title h2 .highlight {
+.Features_Title h2 .highlight1 {
+  background: linear-gradient(90deg, #9005ec, #dc56c6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.Features_Title h2 .highlight2 {
   background: linear-gradient(90deg, #007FF5, #56DC73);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -268,7 +280,7 @@ section {
 }
 
 .ExclusiveBenefits .highlight {
-  background: linear-gradient(90deg, #007FF5, #56DC73);
+  background: linear-gradient(90deg, #f58300, #e9cd52);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -285,136 +297,73 @@ section {
 
 /* Pre-Order Benefit Cards */
 
-/* Pre-Order Benefit Horizontal Cards */
 .Benefits {
   display: flex;
   flex-direction: column;
-  /* Stack cards vertically */
   gap: 2rem;
-  /* Space between each card */
   align-items: center;
-
+  padding: 20px;
 }
 
-/* Pre-Order Benefit Card 1 */
-
-.BenefitCard1 {
+.BenefitCard1, .BenefitCard2 {
   display: flex;
-  flex-direction: row;
-  /* Align items in a row */
   align-items: center;
-  gap: 200px;
-  /* Space between the image and text */
+  gap: 20px;
   padding: 16px;
-  height: 364px;
-  width: 1182px;
+  width: 90%;
+  max-width: 1182px;
   text-align: left;
-  /* Align text to the left */
+  background-color: #2c2c2c;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.BenefitCardTexts {
-  font-size: 28px;
-
-}
-
-.BenefitCardTexts p {
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-
-.BenefitCard1Img {
+.BenefitCard1Img, .BenefitCard2Img {
+  width: 30%;
+  max-width: 439px;
   display: flex;
   justify-content: center;
-  /* Center the image horizontally */
   align-items: center;
-  height: 364px;
-  width: 439px;
-  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
-.BenefitCard1Img img {
-  height: 100%;
+.BenefitCard1Img img, .BenefitCard2Img img {
   width: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-/* Pre-Order Benefit Card 2 */
-
-.BenefitCard2 {
-  display: flex;
-  padding: 16px;
-  flex-direction: row-reverse;
-  /* Flip image and text positions */
-  align-items: center;
-  /* Center content vertically */
-  justify-content: center;
-  /* Center content horizontally */
-  gap: 10px;
-  /* Reduce gap to bring text and image closer */
-  height: 364px;
-  width: 1182px;
-  text-align: left;
-  /* Ensure text alignment */
-}
-
-.BenefitCard2Texts {
-  display: flex;
-  flex-direction: column;
-  /* Stack text vertically */
-  justify-content: flex-start;
-  /* Align content at the top */
-  align-items: flex-start;
-  /* Align text to the left */
-  text-align: left;
-  /* Ensure text alignment is left */
-  gap: 0.5rem;
-  /* Space between heading and paragraph */
-  width: calc(100% - 439px - 20px);
-  /* Adjust width to avoid overlapping with the image */
-  margin-left: 0;
-  /* Remove any default margin */
-  padding: 0;
-  /* Remove extra padding */
-  font-size: 28px;
-}
-
-
-
-.BenefitCard2Texts p {
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-
-.BenefitCard2Img {
-  display: flex;
-  justify-content: center;
-  /* Center the image horizontally */
-  align-items: center;
-  /* Center the image vertically */
-  height: 364px;
-  width: 439px;
-}
-
-.BenefitCard2Img img {
   height: 100%;
-  width: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 15px;
+  margin-left: 50px;
+  margin-right: 40px;
+}
+
+.BenefitCardTexts, .BenefitCard2Texts {
+  flex: 1;
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-left: 20px;
+}
+
+.BenefitCardTexts h4, .BenefitCard2Texts h4 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: #ffffff; /* Highlight heading */
 }
 
 /* Pre-Order Benefit Discount */
 
 .Discount {
-  background-color: #121212;
+  background: linear-gradient(0deg, #161410, #2c2c2c);
+  border-radius: 15px;
   color: #fff;
   padding: 1.5rem;
   border-radius: 10px;
   display: inline-block;
+  padding: 16px;
+  width: 60%;
+  max-width: 1182px;
 }
 
 .Discount h4 {
@@ -431,17 +380,18 @@ section {
 /* Pre-Order Button */
 
 .PreOrderButton {
-  background-color: #fff;
-  color: #f8a700;
+  background-color: #f8a700;
+  color: #000000;
   border: none;
   padding: 0.8rem 2rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .PreOrderButton:hover {
-  background-color: #f8a700;
+  background-color: #e9cd52;
   color: #121212;
 }
 

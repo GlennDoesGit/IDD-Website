@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pre-Order Page</title>
+        <link rel="stylesheet" href="./styles/FormPage2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav>
+            <div class="navbar">
+                <div class="NavbarLogoContainer">
+                    <img class="NavBarLogo" src="Main_Images/Aura Icon.png" class="logo">
+                </div>
+                <div class="NavBarButtons">
+                    <ul>
+                        <li><a href="index.html" class="Pre-OrderBtn"> Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Go Zenith</a></li>
+                        <li><a href="FormIntro.html" class="Pre-Order">Pre-Order</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="FormPage2">
+            <section class="FormPageLeftandRight">
+                <div class="FormPageLeft">
+                    <canvas id="preview-canvas"></canvas>
+                </div>
+
+               
+                <div class="FormPageRight">
+                    <div class="FormPage1Title">
+                        <h1>Personal Details</h1>
+                    </div>
+                    <div class="StreetAddressInput">
+                        <span class="details">Street Address</span>
+                        <input type="text" placeholder="Enter your Address" required>
+                    </div>
+                    <div class="CityInput">
+                        <span class="details">City</span>
+                        <input type="text" placeholder="Enter your City" required>
+                    </div>
+                    <div class="ProvinceInput">
+                        <span class="details">State / Province</span>
+                        <input type="text" placeholder="Enter your State / Province" required>
+                    </div>
+                    <div class="PostalCodeInput">
+                        <span class="details">Postal Code</span>
+                        <input type="text" placeholder="Enter your Postal Code" required>
+                    </div>
+                    <a href="FormPageEnd.html" class="Submit">Next</a>
+                </div>
+            </section>
+        </div>
+        <script src="./scripts/PreOrderView.js" type="module"></script>
+    </body>
+</html>
