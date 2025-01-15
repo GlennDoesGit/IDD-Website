@@ -44,8 +44,8 @@ async function setupViewer() {
   const model = await viewerpreview.load("./assets/iphone_16_pro_max.glb");
 
   // Camera transform
-  viewerpreview.scene.activeCamera.position = new Vector3(10, 0, -10);
-  viewerpreview.scene.activeCamera.target = new Vector3(0, -0.15, 0);
+  viewerpreview.scene.activeCamera.position = new Vector3(10, 0, -6);
+  viewerpreview.scene.activeCamera.target = new Vector3(0, -0.25, 0);
 
   // Camera options
   const options = viewerpreview.scene.activeCamera.getCameraOptions();
@@ -54,8 +54,8 @@ async function setupViewer() {
 
   // Control options
   const controls = viewerpreview.scene.activeCamera.controls;
-  controls.autoRotate = false;
-  controls.autoRotateSpeed = 3;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 2;
   controls.enableDamping = true;
   controls.rotateSpeed = 0.75;
   controls.enableZoom = true;
@@ -82,25 +82,6 @@ async function setupViewer() {
   picking.addEventListener('hoverObjectChanged', (e) => {
     console.log('Hover object changed', e);
   });
-
-  // ui.setupPluginUi(MaterialConfiguratorPlugin);
-
-  // Change color here.
-  const drawer = manager.materials.findMaterialsByName('draw')[0]
-  console.log(drawer);
-
-  // Materials
-  // document.querySelectorAll(".material").forEach((el) => {
-  //   el.addEventListener("click", () => {
-  //     const category = config.variations.materials.find((cat) => cat.name === el.getAttribute("data-category"));
-  //     console.log(category);
-  //     const index = parseInt(el.getAttribute("data-index"));
-  //     console.log(index);
-  //     const type = "materials";
-
-  //     config.applyVariation(category, index, type);
-  //   });
-  // });
 
   // Colors
   document.querySelector('.button-colors.black')?.addEventListener('click', () => {

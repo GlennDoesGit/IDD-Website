@@ -43,21 +43,21 @@
   color: #ccc; /* Optional: Adjust the text color */
 }
 
+/*
 .gradient {
-  background: linear-gradient(to bottom, #332836, #0a0a0a); /* Gradient from top to bottom */
+  background: linear-gradient(to bottom, #332836, #0a0a0a);
   background-size: 100% calc(100% + 1px);
 }
+*/
 
 .viewer-container {
-  width: 400px; /* Adjust width as needed */
-  height: 600px; /* Adjust height as needed */
-  position: relative; /* Enables positioning for child elements */
-  margin: auto; /* Center within its parent */
-  border: 2px solid #ccc; /* Optional: border for visibility */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
-  background: #000; /* Optional: background color for contrast */
-  border-radius: 15px; /* Add rounded corners */
-  overflow: hidden; /* Ensures content inside respects the rounded corners */
+  width: 400px;
+  height: 600px;
+  position: relative;
+  margin: auto;
+  /* border: 2px solid #ccc; */
+  border-radius: 15px;
+  overflow: hidden;
   z-index: 5;
 }
 

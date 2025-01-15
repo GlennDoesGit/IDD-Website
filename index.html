@@ -41,7 +41,7 @@
 
     <!-- The sections are used to animate the model -->
     <section id="section1">
-        <div class="MainTitle">
+        <div class="MainTitle hidden">
             <h1>Aura Zenith</h1>
             <h3>Empower your presence.</h3>
         </div>
@@ -57,7 +57,7 @@
 
     <section class="Features">
         <div class="Features_Title">
-            <h2>A blend of <span class="highlight1">technology</span> and
+            <h2 class="hidden">A blend of <span class="highlight1">technology</span> and
                 <span class="highlight2">wellness</span>.
             </h2>
             <p>Aura’s smartphones adapt to seamlessly integrate with all your unique needs,
@@ -65,17 +65,17 @@
             </p>
         </div>
 
-        <section class="Feature_Cards">
-            <div class="Card_1">
+        <section class="Feature_Cards hidden">
+            <div class="Card_1 slide-up">
                 <div class="Feature_1">
                     <h2>Power up your Productivity</h2>
                     <p>Writing tools that proofread, summarize, and rewrite sentences in any tone you choose.</p>
                 </div>
-                <img src="./assets/ProductivityFeature.jpg" alt="Productivity Feature">
+                <img src="./assets/ProductivityFeature.png" alt="Productivity Feature">
 
             </div>
 
-            <div class="Card_2">
+            <div class="Card_2 slide-up">
                 <div class="Feature_2">
                     <h2>Minding your Mindfulness</h2>
                     <p>Accurate monitoring of your sleep quality, heart rate, and stress levels to encourage your
@@ -85,20 +85,19 @@
 
             </div>
 
-            <div class="Card_3">
+            <div class="Card_3 slide-up">
                 <div class="Feature_3">
                     <h2>Create your Zenith Canvas</h2>
                     <p>Digital creation app that lets you create unique art from your descriptions. Experiment with
                         animation, illustrations, and sketches.</p>
                 </div>
-                <img src="./assets/CreativityFeature.jpg" alt="Creativity Feature">
-
+                <img src="./assets/CreativityFeature.png" alt="Creativity Feature">
             </div>
         </section>
     </section>
 
     <div class="model-preview">
-        <section>
+        <section class="hidden">
             <h1>Pick the right Zenith for you.</h1>
             <p>A variety of colors to suit your style.</p>
         </section>
@@ -126,7 +125,7 @@
 
         <div class="Benefits">
 
-            <div class="BenefitCard1">
+            <div class="BenefitCard1 slide-in-left">
                 <div class="BenefitCard1Img">
                     <img src="./assets/ExclusiveBenefitPersonalisation.png" alt="Engraving Feature">
                 </div>
@@ -139,7 +138,7 @@
                 </div>
             </div>
 
-            <div class="BenefitCard2">
+            <div class="BenefitCard2 slide-in-left">
                 <div class="BenefitCard2Img">
                     <img src="./assets/PriorityDelivery.jpeg" alt="Priority Delivery">
                 </div>
@@ -152,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="Discount">
+            <div class="Discount hidden">
                 <h4><strong><span class="highlight">15% Discount</span></strong> For Pre-Orders!</h4>
                 <p>Don’t miss this opportunity! Offer ends on 31st December 2024, or while stocks last.</p>
                 <button class="PreOrderButton">Pre-Order Now</button>
@@ -197,6 +196,7 @@
 
     <!-- JavaScript -->
     <canvas class="webgl"></canvas>
+    <script src="./scripts/app.js" type="module"></script>
     <script src="./scripts/main.js" type="module"></script>
     <script src="./scripts/ModelPreview.js" type="module"></script>
 </body>

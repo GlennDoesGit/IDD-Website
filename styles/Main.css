@@ -140,7 +140,7 @@ section {
 /* 3 Features Section */
 
 .Features {
-  padding: 50px 20px;
+  padding: 60px 20px;
 
   text-align: center;
   background-color: #121212;
@@ -191,12 +191,14 @@ section {
   border-radius: 10px;
   max-width: 300px;
   text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .Card_1:hover,
 .Card_2:hover,
 .Card_3:hover {
   background-color: #3d3d3d;
+  transform: scale(1.05);
 }
 
 .Card_1 img,
@@ -226,43 +228,6 @@ section {
 }
 
 /* Customisable View */
-
-.PickZenith {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #1c1c1c;
-}
-
-.PickZenith h2 {
-  font-size: 2em;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.PickZenith .ProductImage {
-  width: 300px;
-  height: auto;
-  background-color: #4c4c4c;
-  margin: 0 auto;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.PickZenith .ColorOptions {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.PickZenith .ColorOptions .color-dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: gray;
-  border: 2px solid #fff;
-  cursor: pointer;
-}
 
 /* Pre-Order Benefit Sections */
 
@@ -464,4 +429,57 @@ section {
 
 .FooterBottom a:hover {
   color: #f8a700;
+}
+
+/* Scroll fade animations */
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-15%);
+  transition: all 0.5s;
+}
+
+.slide-in-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-up
+{
+  opacity: 0;
+  transform: translateY(15%);
+  transition: all 0.5s;
+}
+
+.slide-up.show
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Card_1.slide-up {
+  transition-delay: 0s;
+}
+
+.Card_2.slide-up {
+  transition-delay: 0.1s;
+}
+
+.Card_3.slide-up {
+  transition-delay: 0.2s;
+}
+
+@media(prefers-reduced-motion)
+{
+  .hidden {
+    transition: none
+  }
 }

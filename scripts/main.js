@@ -31,6 +31,8 @@ async function setupViewer() {
   await addBasePlugins(viewer);
   await viewer.addPlugin(ScrollableCameraViewPlugin);
 
+  const manager = await viewer.addPlugin(AssetManagerPlugin);
+
   // const manager = await viewer.getPlugin(AssetManagerPlugin);
   // This must be called after adding any plugin that changes the render pipeline.
 	viewer.renderer.refreshPipeline();
@@ -72,6 +74,19 @@ async function setupViewer() {
   //     indent: 0,
   //   }
   // });
+
+  const frame = manager.materials.findMaterialsByName('metalframe.002')[0]
+  const baseColor = manager.materials.findMaterialsByName('basecolor.001')[0]
+  const appleLogo = manager.materials.findMaterialsByName('apple_logo.001')[0]
+
+  function ChangeColorBlue() {
+    frame.color = new Color(0x2d2787);
+    baseColor.color = new Color(0x37326c);
+    appleLogo.color = new Color(0x54559a);
+    viewerpreview.scene.setDirty();
+  }
+
+  ChangeColorBlue();
 }
 
 setupViewer();
