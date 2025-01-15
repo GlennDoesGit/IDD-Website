@@ -1,3 +1,5 @@
+document.body.classList.add('js-enabled');
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)

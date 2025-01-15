@@ -168,7 +168,7 @@ section {
 }
 
 
-.Features_Title p {
+.Features_Title p {  
   font-size: 21px;
   line-height: 1.6;
   color: #ccc;
@@ -432,31 +432,39 @@ section {
 }
 
 /* Scroll fade animations */
-.hidden {
+.hidden, 
+.slide-in-left, 
+.slide-up {
+  opacity: 1; /* Visible by default */
+  transform: none; /* Reset transform by default */
+  transition: none; /* No animations by default */
+}
+
+/* JavaScript-enabled styles */
+.js-enabled .hidden {
   opacity: 0;
   transition: all 1s;
 }
 
-.show {
-  opacity: 1;
-}
-
-.slide-in-left {
+.js-enabled .slide-in-left {
   opacity: 0;
   transform: translateX(-15%);
   transition: all 0.5s;
 }
 
-.slide-in-left.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.slide-up
-{
+.js-enabled .slide-up {
   opacity: 0;
   transform: translateY(15%);
   transition: all 0.5s;
+}
+
+.hidden.show {
+  opacity: 1;
+}
+
+.slide-in-left.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .slide-up.show
@@ -475,6 +483,13 @@ section {
 
 .Card_3.slide-up {
   transition-delay: 0.2s;
+}
+
+noscript .hidden, 
+noscript .slide-in-left, 
+noscript .slide-up {
+  opacity: 1;
+  transform: none; /* Reset any transform applied for animations */
 }
 
 @media(prefers-reduced-motion)
