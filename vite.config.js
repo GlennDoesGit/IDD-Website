@@ -11,8 +11,8 @@ export default defineConfig({
         main: 'index.html', // Main entry point
         page1: 'pre-order.html', // Additional page 1
         page2: 'FormPage1.html', // Additional page 2
-        page3: 'FormPage2.html',
-        page4: 'FormPageEnd.html',
+        page3: 'FormPageEnd.html', // Additional page 2
+        page4: 'GoZenith.html',
       },
     },
   },

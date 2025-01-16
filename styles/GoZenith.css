@@ -152,6 +152,11 @@ body {
   gap: 20px; /* Add space between elements */
 }
 
+.Card_3 .Feature_3Content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 
@@ -182,14 +187,11 @@ margin-bottom: -155px;
 
 .Feature1Textbox, .Feature2Textbox, .Feature3Textbox .p{
   font-size: 16px;
-  transition: transform 2s ease-in-out;
-  opacity: 0%;
+
+
 }
 
-.Feature1Textbox:hover, .Feature2Textbox:hover, .Feature3Textbox:hover{
-  transform: translateY(-10px);
-  opacity: 100%;
-}
+
 
 
 /* Pre-Order Button */
